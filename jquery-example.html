@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Pagination Example</title>
+    <link rel="stylesheet" href="./rate-jquery.css" />
+  </head>
+  <body>
+    <div class="rate-demo">
+      <h1>jQuery 分頁範例</h1>
+      <ol class="rate-demo-list" id="resultList"></ol>
+      <div id="pagination"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./rate-pagination.jquery.js"></script>
+    <script>
+      $(function () {
+        var list = [
+          "dummy1",
+          "dummy2",
+          "dummy3",
+          "dummy4",
+          "dummy5",
+          "dummy6",
+          "dummy7",
+          "dummy8",
+          "dummy9",
+          "dummy10",
+          "dummy11",
+          "dummy12"
+        ];
+
+        $("#pagination").ratePagination({
+          list: list,
+          countOfPage: 1,
+          currPage: 1,
+          onPageChange: function (state) {
+            var html = "";
+
+            $.each(state.pageItems, function (_, item) {
+              html += "<li>" + item + "</li>";
+            });
+
+            $("#resultList").html(html);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

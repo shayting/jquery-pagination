@@ -1,0 +1,98 @@
+.page-number {
+  margin: auto;
+  display: flex;
+}
+
+.pageCircle {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #dbefe6;
+  background-image: url("@/assets/img/upload/rate/arrow_active_hover.svg");
+  margin: 0 24px;
+  border: 0px;
+}
+
+.pageCircle:hover {
+  background-color: #e8f4ef;
+}
+
+.page-count {
+  height: 20px;
+  margin-bottom: 14px;
+  flex-grow: 0;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666;
+}
+
+.unactiveNumber {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 8px;
+  border: 0px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+}
+
+.activeNumber {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 8px;
+  border: 0px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  background-color: #67b77e;
+  color: #fff;
+}
+
+
+/* mobile */
+@media (max-width: 767px) {
+  .activeNumber.activeNumber {
+    display: unset;
+  }
+  .unactiveNumber {
+    display: none;
+  }
+}

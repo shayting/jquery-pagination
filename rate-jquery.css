@@ -1,0 +1,117 @@
+.page-number {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageCircle {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #dbefe6;
+  background-image: url("./arrow_active_hover.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 24px;
+  border: 0;
+  cursor: pointer;
+}
+
+.pageCircle:hover {
+  background-color: #e8f4ef;
+}
+
+.pageCircle:disabled {
+  background-color: #f5f5f5;
+  background-image: url("./arrow_disable.svg");
+  cursor: not-allowed;
+}
+
+.page-count {
+  height: 20px;
+  margin-bottom: 14px;
+  flex-grow: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  color: #666;
+}
+
+.btn-pointer {
+  cursor: pointer;
+}
+
+.unactiveNumber,
+.activeNumber {
+  width: 40px;
+  height: 40px;
+  flex-grow: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 8px;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+}
+
+.unactiveNumber {
+  color: #333;
+  background-color: #fff;
+}
+
+.activeNumber {
+  background-color: #67b77e;
+  color: #fff;
+}
+
+.rate-demo {
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 24px;
+  border: 1px solid #dfe8e3;
+  border-radius: 20px;
+  background: #f8fbf9;
+  font-family: "Montserrat", sans-serif;
+}
+
+.rate-demo h1 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  color: #1f3d2f;
+}
+
+.rate-demo-list {
+  margin: 0 0 24px;
+  padding-left: 20px;
+  color: #333;
+}
+
+.rate-demo-list li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .activeNumber.activeNumber {
+    display: unset;
+  }
+
+  .unactiveNumber {
+    display: none;
+  }
+}
